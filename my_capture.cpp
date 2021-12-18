@@ -10,9 +10,7 @@
 #include <boost/filesystem.hpp>
 
 using namespace boost::filesystem;
-
-for (directory_entry& entry : directory_iterator(inputPath))
-    std::cout << entry.path() << '\n';
+using namespace std;
 
 void save_frame_depth_data(const std::string& filename,
                            rs2::frame frame,
