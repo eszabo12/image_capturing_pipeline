@@ -13,7 +13,7 @@
 #include <boost/filesystem.hpp>
 // 3rd party header for writing png files
 #define STB_IMAGE_WRITE_IMPLEMENTATION
-#include "stb_image_write.h"
+#include "include/stb_image_write.h"
 
 #define NUM_SLEEPS 100
 using namespace boost::filesystem;
