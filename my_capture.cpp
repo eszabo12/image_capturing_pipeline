@@ -110,6 +110,13 @@ int main(int argc, char * argv[]) try
     if (maxnum == INT_MIN) maxnum = -1; // no files in the directories yet
     maxnum++; // we want to use one more than the max num so no duplicates
 
+    for (directory_iterator itr(p); itr != end; ++itr){
+        const char* name = itr->path().c_str();
+        string ext = itr->path().string() + ".png";
+        const char* newName =  ext.c_str();
+        rename(name, newName);
+    }    
+    return 0;
     rs2::colorizer color_map;
     
     auto depth_units = rs2::context().query_devices().front()
