@@ -98,8 +98,7 @@ void save_frame_color_data(const std::string& filename,
 int main(int argc, char * argv[]) try
 {
 
-    // find the last number
-    path p ("./pictures/purplering/png/");
+    path p ("./pictures/");
     directory_iterator end;
     int maxnum = INT_MIN;
     for (directory_iterator itr(p); itr != end; ++itr){
@@ -116,7 +115,6 @@ int main(int argc, char * argv[]) try
         const char* newName =  ext.c_str();
         rename(name, newName);
     }    
-    return 0;
     rs2::colorizer color_map;
     
     auto depth_units = rs2::context().query_devices().front()
@@ -140,8 +138,8 @@ int main(int argc, char * argv[]) try
         char buff[1000];
         sprintf(buff, "./pictures/purplering/png/%d", i/NUM_SLEEPS + maxnum);
         if (i%NUM_SLEEPS == 0){
-            save_frame_depth_data("./pictures/purplering/depth/" + to_string(i/NUM_SLEEPS + maxnum), depth, depth_units);
-            save_frame_color_data("./pictures/purplering/color/" + to_string(i/NUM_SLEEPS + maxnum), color);
+            save_frame_depth_data("./pictures/depth/" + to_string(i/NUM_SLEEPS + maxnum), depth, depth_units);
+            save_frame_color_data("./pictures/color/" + to_string(i/NUM_SLEEPS + maxnum), color);
             save_frame_photo(buff, data);
         }
         i++;
