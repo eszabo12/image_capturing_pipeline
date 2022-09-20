@@ -4,4 +4,6 @@ change NUM_SLEEPS macro on line 18 of my_capture.cpp to change the image capturi
 
 on ubuntu:
 chmod +x start.sh
+
+
 ./start
