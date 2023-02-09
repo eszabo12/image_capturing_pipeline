@@ -3,7 +3,9 @@
 change NUM_SLEEPS macro on line 18 of my_capture.cpp to change the image capturing rate to your needs.
 
 on ubuntu:
-chmod +x start.sh
 
+mkdir pictures
 
-./start
+make
+
+./a
