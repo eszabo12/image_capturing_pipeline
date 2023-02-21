@@ -1,11 +1,13 @@
 # An Image Capturing Pipeline for Easy Data Collection
 
-change NUM_SLEEPS macro on line 18 of my_capture.cpp to change the image capturing rate to your needs.
+### Required: An Intel Realsense D435 or similar
 
-on ubuntu:
+change `NUM_SLEEPS` macro on line 18 of my_capture.cpp to change the image capturing rate to your needs.
 
-mkdir pictures
+### on ubuntu:
 
-make
+`mkdir pictures`
 
-./a
+`make`
+
+`./a`
